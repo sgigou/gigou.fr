@@ -11,6 +11,23 @@ $color-text: #303336;
 $color-text-light: rgba(48, 51, 54, 0.75);
 $color-background: #F0F2F6;
 
+// Mixins
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transform...) {
+	-webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
 // Defaults
 
 body {
@@ -36,10 +53,6 @@ a {
 	
 	&.block {
 		text-align: center;
-		img {
-			display: block;
-			margin: 0 auto;
-		}
 	}
 }
 
@@ -52,6 +65,25 @@ footer {
 }
 
 // Components
+
+.img-rounded {
+	img {
+		display: block;
+		margin: 0 auto;
+		border-radius: 50%;
+		border: 5px solid white;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+		@include transition(0.5s ease-in-out);
+		margin-bottom: 20px;
+	}
+	
+	&:hover {
+		img {
+			box-shadow: 0 10px 40px rgba(0,0,0,0.125);
+			@include transform(scale(1.05));
+		}
+	}
+}
 
 .site-title {
 	line-height: 50px;
@@ -75,9 +107,6 @@ footer {
 
 .margin-top-100 {
 	margin-top: 100px;
-	/*@media screen and (max-width: $media-mobile-max) {
-		margin-top: 50px;
-	}*/
 }
 
 .margin-top-200 {
@@ -87,8 +116,8 @@ footer {
 	}
 }
 
-.mobile-margin-top-25 {
+.mobile-margin-top-50 {
 	@media screen and (max-width: $media-mobile-max) {
-		margin-top: 25px;
+		margin-top: 50px;
 	}
 }
