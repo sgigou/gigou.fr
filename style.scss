@@ -7,14 +7,48 @@ $container-max-width: 960px;
 @import "unsemantic/unsemantic-grid-responsive";
 
 $color-hr: rgba(48, 51, 54, 0.25);
+$color-text: #303336;
+$color-text-light: rgba(48, 51, 54, 0.75);
+$color-background: #F0F2F6;
 
 // Defaults
 
 body {
 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, "sans-serif";
 	font-size: 18px;
-	color: #303336;
-	background: #F0F2F6;
+	color: $color-text;
+	background: $color-background;
+}
+
+h2 {
+	font-size: 35px;
+	text-align: center;
+}
+
+h3 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: $color-text;
+	
+	&.block {
+		text-align: center;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+footer {
+	margin-top: 100px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	color: $color-text-light;
 }
 
 // Components
@@ -24,6 +58,37 @@ body {
 	font-weight: bold;
 }
 
+.border-top {
+	border-top: 1px solid $color-hr;
+}
+
 .border-bottom {
 	border-bottom: 1px solid $color-hr;
+}
+
+.margin-top-50 {
+	margin-top: 50px;
+	@media screen and (max-width: $media-mobile-max) {
+		margin-top: 25px;
+	}
+}
+
+.margin-top-100 {
+	margin-top: 100px;
+	/*@media screen and (max-width: $media-mobile-max) {
+		margin-top: 50px;
+	}*/
+}
+
+.margin-top-200 {
+	margin-top: 200px;
+	@media screen and (max-width: $media-mobile-max) {
+		margin-top: 100px;
+	}
+}
+
+.mobile-margin-top-25 {
+	@media screen and (max-width: $media-mobile-max) {
+		margin-top: 25px;
+	}
 }

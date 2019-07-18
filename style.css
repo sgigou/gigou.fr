@@ -963,9 +963,58 @@ body {
   color: #303336;
   background: #F0F2F6; }
 
+h2 {
+  font-size: 35px;
+  text-align: center; }
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+a {
+  text-decoration: none;
+  color: #303336; }
+  a.block {
+    text-align: center; }
+    a.block img {
+      display: block;
+      margin: 0 auto; }
+
+footer {
+  margin-top: 100px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  color: rgba(48, 51, 54, 0.75); }
+
 .site-title {
   line-height: 50px;
   font-weight: bold; }
 
+.border-top {
+  border-top: 1px solid rgba(48, 51, 54, 0.25); }
+
 .border-bottom {
   border-bottom: 1px solid rgba(48, 51, 54, 0.25); }
+
+.margin-top-50 {
+  margin-top: 50px; }
+  @media screen and (max-width: 767px) {
+    .margin-top-50 {
+      margin-top: 25px; } }
+
+.margin-top-100 {
+  margin-top: 100px;
+  /*@media screen and (max-width: $media-mobile-max) {
+  	margin-top: 50px;
+  }*/ }
+
+.margin-top-200 {
+  margin-top: 200px; }
+  @media screen and (max-width: 767px) {
+    .margin-top-200 {
+      margin-top: 100px; } }
+
+@media screen and (max-width: 767px) {
+  .mobile-margin-top-25 {
+    margin-top: 25px; } }
