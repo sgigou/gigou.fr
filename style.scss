@@ -90,6 +90,15 @@ footer {
 	font-weight: bold;
 }
 
+// Utility
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+
 .border-top {
 	border-top: 1px solid $color-hr;
 }
