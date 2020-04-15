@@ -1007,6 +1007,12 @@ footer {
   line-height: 50px;
   font-weight: bold; }
 
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
 .border-top {
   border-top: 1px solid rgba(48, 51, 54, 0.25); }
 
